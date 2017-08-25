@@ -35,7 +35,7 @@
             name="Photo Save" 
             id="menu_action_view_photo_save_wizard" 
             action="action_view_photo_save_wizard" 
-            parent="hr.menu_hr_root" sequence="42"/>
+            parent="hr.menu_hr_main" sequence="42"/>
 
     </data>
 
