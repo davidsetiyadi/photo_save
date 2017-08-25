@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    	<record id="view_photo_save_wizard" model="ir.ui.view">
+            <field name="name">Photo Save</field>
+            <field name="model">photo.save.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Photo Save">
+                    <!-- <group col="4" string="Allocation Request">                       
+                        <label for="duration" string="Duration"/>
+                        <div>
+                            <field name="duration" class="oe_inline" required="1"/> days
+                        </div>
+                    </group> -->
+                    <footer>
+                         <button name="button_generate" type="object" string="Generate" class="oe_highlight"/> 
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+    	 <record id="action_view_photo_save_wizard" model="ir.actions.act_window">
+            <field name="name">Photo Save</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">photo.save.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    	 <menuitem
+            name="Photo Save" 
+            id="menu_action_view_photo_save_wizard" 
+            action="action_view_photo_save_wizard" 
+            parent="hr.menu_hr_root" sequence="42"/>
+
+    </data>
+
+</openerp>
